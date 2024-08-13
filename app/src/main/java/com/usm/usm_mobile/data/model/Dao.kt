@@ -4,7 +4,7 @@ import androidx.room.Dao
 import androidx.room.Query
 
 @Dao
-interface Dao {
+public interface Dao {
     @Query("SELECT * FROM ")
     suspend fun getAllUsers():List<User>
 
