@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "USM_Mobile"
+rootProject.name = "UMS_Mobile"
 include(":app")

@@ -1,4 +1,4 @@
-package com.usm.usm_mobile.data.repository
+package com.ums.ums_mobile.data.repository
 
 class Repository (){
 

@@ -1,4 +1,4 @@
-package com.usm.usm_mobile.ui.components
+package com.ums.ums_mobile.ui.components
 
 import androidx.compose.material3.Button
 import androidx.compose.runtime.Composable
@@ -6,7 +6,7 @@ import androidx.compose.runtime.Composable
 object Components {
 
     @Composable
-    fun addButton(repository:){
+    fun addButton(){
         Button(onClick = {
 
         }) {

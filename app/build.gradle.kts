@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.usm.usm_mobile"
+        applicationId = "com.ums.ums_mobile"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

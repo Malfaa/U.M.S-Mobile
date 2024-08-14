@@ -1,4 +1,4 @@
-package com.usm.usm_mobile.data.model
+package com.ums.ums_mobile.data.model
 
 import android.content.Context
 import androidx.room.Database

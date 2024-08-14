@@ -1,4 +1,4 @@
-package com.usm.usm_mobile.ui.theme
+package com.ums.ums_mobile.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

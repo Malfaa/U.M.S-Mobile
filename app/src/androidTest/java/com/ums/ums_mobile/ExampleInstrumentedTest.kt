@@ -1,4 +1,4 @@
-package com.usm.usm_mobile
+package com.ums.ums_mobile
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -1,4 +1,4 @@
-package com.usm.usm_mobile
+package com.ums.ums_mobile
 
 import org.junit.Test
 
