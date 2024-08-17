@@ -15,12 +15,13 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.usm.usm_mobile.R
 
 @Composable
-fun UserScreen(navController: NavController){
+fun UserScreen(navController: NavHostController){
     Image(
-        painter = painterResource(id = R.drawable.adicionar_button),
+        painter = painterResource(id = R.drawable.adicionar_bttn),
         contentDescription = "image description",
         contentScale = ContentScale.None,
         modifier = Modifier

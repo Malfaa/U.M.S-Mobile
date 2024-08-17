@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.ums.ums_mobile.ui.components.Navigation
+import com.ums.ums_mobile.ui.screens.HomeScreen
 import com.ums.ums_mobile.ui.theme.USM_MobileTheme
 
 class MainActivity : ComponentActivity() {
@@ -41,6 +42,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     USM_MobileTheme {
-        Greeting("Android")
+//        Greeting("Android")
+        Navigation()
     }
+    
 }

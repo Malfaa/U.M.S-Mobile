@@ -13,7 +13,7 @@ fun addButton(){
     Button(onClick = {},
         modifier = Modifier
     ) {
-        Icon(painter = painterResource(id = R.drawable.adicionar_button), contentDescription =  stringResource( R.string.add_btn_descrip))
+        Icon(painter = painterResource(id = R.drawable.adicionar_bttn), contentDescription =  stringResource( R.string.add_btn_descrip))
     }
 }
 
