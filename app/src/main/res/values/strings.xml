@@ -1,12 +1,17 @@
 <resources>
     <string name="app_name">UMS_Mobile</string>
 
+<!--    Home Items-->
     <string name="users">Users</string>
     <string name="management">Management</string>
     <string name="configuration">Configuration</string>
     <string name="logout">Logout</string>
+    <string name="logo">Logo UMS</string>
 
-    <!--Buttons-->
+<!--    TextField-->
+
+
+<!--    Buttons-->
     <string name="add_btn_descrip">Add button</string>
     <string name="rmv_btn_descrip">Button that removes user</string>
     <string name="refresh_btn_descrip">Refresh user list</string>
