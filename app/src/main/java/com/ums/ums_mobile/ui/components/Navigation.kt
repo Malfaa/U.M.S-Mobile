@@ -13,5 +13,8 @@ fun Navigation(){
     NavHost(navController = navController, startDestination = "home"){
         composable("home"){ HomeScreen(navController)}
         composable("users"){ UserScreen(navController)}
+        //composable("management"){ ManagementScreen(navController)}
+        //composable("config"){ ConfigScreen(navController)}
+
     }
 }

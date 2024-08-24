@@ -2,44 +2,30 @@ package com.ums.ums_mobile.ui.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Button
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import androidx.navigation.NavController
 import androidx.navigation.NavHostController
-import com.ums.ums_mobile.ui.theme.BorderColor
-import com.ums.ums_mobile.ui.theme.ButtonBG
+import com.ums.ums_mobile.ui.components.MainButtons
 import com.ums.ums_mobile.ui.theme.GradientBrush
 import com.usm.usm_mobile.R
 
 @Composable
-fun HomeScreen(navController: NavHostController){
-    Column(
+fun HomeScreen(navController: NavHostController ){
+    Column( //TODO fazer um Composable Surface para colocar de BackGround das Column
         verticalArrangement = Arrangement.spacedBy(62.dp, Alignment.CenterVertically),
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight()
-            .padding(start = 50.dp, top = 38.dp, end = 50.dp, bottom = 38.dp)
+//            .padding(start = 50.dp, top = 38.dp, end = 50.dp, bottom = 38.dp)
             .background(GradientBrush)
     ) {
 
@@ -51,56 +37,17 @@ fun HomeScreen(navController: NavHostController){
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
 
-        Button(
-            onClick = { navController.navigate("users") },
-            modifier = Modifier
-                .border(
-                    width = 1.dp,
-                    color = BorderColor,
-                    shape = RoundedCornerShape(size = 30.dp)
-                )
-                .width(260.dp)
-                .height(55.dp)
-                .background(color = ButtonBG, shape = RoundedCornerShape(size = 30.dp))
-                .padding(start = 10.dp, top = 10.dp, end = 10.dp, bottom = 10.dp)) {
-            Text(
-                text = stringResource(id = R.string.users),
-                style = TextStyle(
-                    fontSize = 20.sp,
-//                fontFamily = FontFamily(Font(R.font.lato)),
-//                fontWeight = FontWeight(400),
-                    color = Color(0xFFFFFFFF),
-                    textAlign = TextAlign.Center,
-                )
-            )
-        }
-        }
-        Button(
-            onClick = { /*TODO*/ },
-            modifier = Modifier
-                .border(
-                    width = 1.dp,
-                    color = BorderColor,
-                    shape = RoundedCornerShape(size = 30.dp)
-                )
-                .width(260.dp)
-                .height(55.dp)
-                .background(color = ButtonBG, shape = RoundedCornerShape(size = 30.dp))
-                .padding(start = 10.dp, top = 10.dp, end = 10.dp, bottom = 10.dp)
+            //UserScreen
+            MainButtons(nav = "users", buttonText = "users", navController = navController)
 
-        ) {
+            //ManagementScreen
+            MainButtons(nav = "management", buttonText = "management", navController = navController)
 
-        }
+            //ConfigurationScreen
+            MainButtons(nav = "configuration", buttonText = "configuration", navController = navController)
 
-        Button(onClick = { /*TODO*/ }) {
-
-        }
-
-        Button(onClick = { /*
-    voltar para a tela Login
-    desconectar Firebase
-    */ }) {
-
+            //LoginScreen
+            MainButtons(nav = "login", buttonText = "logout", navController = navController)
         }
     }
 }
