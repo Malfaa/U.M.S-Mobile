@@ -86,9 +86,16 @@ fun RefreshButton(buttonText:String, /*viewModel: ViewModel*/){
 }
 
 @Composable
-fun ConfigButton(){
-    Button(onClick = { /*TODO*/ }) {
-        Icon(painter = painterResource(id = R.drawable.config_button), contentDescription =  stringResource(R.string.config_btn_descrip))
+fun ConfigButton(){// esse é do item
+    Button(
+        onClick = {
+            //ConfigurationAlert()
+        }
+    ) {
+        Icon(
+            painter = painterResource(id = R.drawable.config_button),
+            contentDescription =  stringResource(R.string.config_btn_descrip)
+        )
     }
 }
 
