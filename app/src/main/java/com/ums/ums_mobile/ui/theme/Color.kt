@@ -15,6 +15,7 @@ val GradientBrush = Brush.linearGradient( //background
     end = Offset(1000f, 1000f) // Ponto de término do gradiente
 )
 val TextFieldBG = Color(0xB2DCDCDC)
+val ItemBackground = Color(0x33DCDCDC)
 
 val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
