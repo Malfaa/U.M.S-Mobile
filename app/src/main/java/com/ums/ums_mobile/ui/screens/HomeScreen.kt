@@ -13,21 +13,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.ums.ums_mobile.ui.components.Backgrounds
 import com.ums.ums_mobile.ui.components.MainButtons
 import com.ums.ums_mobile.ui.theme.GradientBrush
 import com.usm.usm_mobile.R
 
 @Composable
 fun HomeScreen(navController: NavHostController ){
-    Column( //TODO fazer um Composable Surface para colocar de BackGround das Column
-        verticalArrangement = Arrangement.spacedBy(62.dp, Alignment.CenterVertically),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight()
-//            .padding(start = 50.dp, top = 38.dp, end = 50.dp, bottom = 38.dp)
-            .background(GradientBrush)
-    ) {
+    Backgrounds().apply { // TODO: verificar se isto dá certo
 
         Image(painterResource(id = R.drawable.logo_160), contentDescription = stringResource(id =
         R.string.logo))
