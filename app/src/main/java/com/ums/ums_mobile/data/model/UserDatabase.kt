@@ -1,6 +1,7 @@
 package com.ums.ums_mobile.data.model
 
 import android.content.Context
+import android.service.autofill.UserData
 import androidx.room.Database
 import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
@@ -13,12 +14,12 @@ abstract class UserDatabase: RoomDatabase() {
         @Volatile
         private var INSTANCE: UserDatabase? = null
 
-        fun getDatabase(context: Context): Any {
+        fun getDatabase(context: Context): UserDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = databaseBuilder(
                     context.applicationContext,
                     UserDatabase::class.java,
-                    "app_database"
+                    "USER_DATABASE"
                 ).build()
                 INSTANCE = instance
                 instance
