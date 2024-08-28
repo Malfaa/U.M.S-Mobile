@@ -19,6 +19,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModel
 import com.ums.ums_mobile.ui.theme.BorderColor
 import com.ums.ums_mobile.ui.theme.ButtonBG
 import com.usm.usm_mobile.R
@@ -114,8 +115,10 @@ fun CancelButton(){
 }
 
 @Composable
-fun SearchButton(){
-    Button(onClick = { /*TODO*/ }) {
+fun SearchButton(viewModel: ViewModel){
+    Button(onClick = {
+
+    }) {
         Icon(painter = painterResource(id = R.drawable.search_bttn), contentDescription =  stringResource(R.string.search_btn_descrip))
     }
 }

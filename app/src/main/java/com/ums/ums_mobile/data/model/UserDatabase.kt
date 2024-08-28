@@ -1,14 +1,13 @@
 package com.ums.ums_mobile.data.model
 
 import android.content.Context
-import android.service.autofill.UserData
 import androidx.room.Database
 import androidx.room.Room.databaseBuilder
 import androidx.room.RoomDatabase
 
 @Database(entities = [User::class], version = 1)
 abstract class UserDatabase: RoomDatabase() {
-    abstract fun dao(): Dao
+    abstract fun dao(): UserDao
 
     companion object {
         @Volatile
