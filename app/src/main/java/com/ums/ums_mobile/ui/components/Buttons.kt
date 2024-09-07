@@ -1,5 +1,6 @@
 package com.ums.ums_mobile.ui.components
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.height
@@ -26,7 +27,7 @@ import com.usm.usm_mobile.R
 import androidx.navigation.NavHostController
 
 @Composable
-fun MainButtons(nav: String, buttonText:String, navController: NavHostController){
+fun MainButtons(nav: String, @StringRes buttonText:Int, navController: NavHostController){
     Button(
         onClick = { navController.navigate(nav) },
         colors = ButtonColors(ButtonBG, ButtonBG, ButtonBG, ButtonBG),
@@ -40,10 +41,10 @@ fun MainButtons(nav: String, buttonText:String, navController: NavHostController
             .width(260.dp)
             .height(55.dp)
             .background(color = ButtonBG, shape = RoundedCornerShape(size = 30.dp))
-            .padding(start = 10.dp, top = 10.dp, end = 10.dp, bottom = 10.dp)
+            .padding(start = 10.dp, top = 5.dp, end = 10.dp, bottom = 10.dp)
     ){
         Text(
-            text = stringResource(id = "R.string.$buttonText".toInt()),
+            text = stringResource(id = buttonText),
             style = TextStyle(
                 fontSize = 20.sp,
 //                fontFamily = FontFamily(Font(R.font.lato)),
@@ -78,11 +79,11 @@ fun RemoveButton(buttonText:String){
 }
 
 @Composable
-fun RefreshButton(buttonText:String, /*viewModel: ViewModel*/){
+fun RefreshButton(@StringRes buttonText:Int, /*viewModel: ViewModel*/){
     Button(onClick = {
         //TODO abrir o viewmodel, vai pegar do Firebase, se tiver coisa nova, vai atualizar o bd e em seguida irá usar a função de dar SELECT, atualizando assim a lista
     }) {
-        Icon(painter = painterResource(id = R.drawable.refresh_button), contentDescription =  stringResource(id = "R.string.$buttonText".toInt()))
+        Icon(painter = painterResource(id = R.drawable.refresh_button), contentDescription =  stringResource(id = buttonText))
     }
 }
 
@@ -119,6 +120,18 @@ fun SearchButton(viewModel: ViewModel){
     Button(onClick = {
 
     }) {
+        Icon(painter = painterResource(id = R.drawable.search_bttn), contentDescription =  stringResource(R.string.search_btn_descrip))
+    }
+}
+
+@Composable
+fun HomeButton(navController: NavHostController){
+    Button(
+        onClick = { navController.navigate("users") },
+        modifier = Modifier
+
+
+    ) {
         Icon(painter = painterResource(id = R.drawable.search_bttn), contentDescription =  stringResource(R.string.search_btn_descrip))
     }
 }
