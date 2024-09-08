@@ -30,14 +30,16 @@ fun MainBackgrounds(content: @Composable () -> Unit){
 @Composable
 fun UsersBackgrounds(content: @Composable () -> Unit){
     Column (
-        verticalArrangement = Arrangement.spacedBy(62.dp, Alignment.CenterVertically),
-        horizontalAlignment = Alignment.CenterHorizontally,
+//        verticalArrangement = Arrangement.spacedBy(63.dp, Alignment.CenterVertically),
+        horizontalAlignment = Alignment.Start,
+
         modifier = Modifier
             .fillMaxWidth()
             .fillMaxHeight()
 //            .padding(start = 50.dp, top = 38.dp, end = 50.dp, bottom = 38.dp)
             .background(BackgroundGradient)
-            .padding(10.dp)
+            .padding(start = 10.dp, top = 10.dp, end = 10.dp, bottom = 10.dp)
+
     )
     {
         content()

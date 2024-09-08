@@ -9,8 +9,10 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -28,7 +30,7 @@ import androidx.navigation.NavHostController
 
 @Composable
 fun MainButtons(nav: String, @StringRes buttonText:Int, navController: NavHostController){
-    Button(
+    TextButton(
         onClick = { navController.navigate(nav) },
         colors = ButtonColors(ButtonBG, ButtonBG, ButtonBG, ButtonBG),
         shape = RoundedCornerShape(size = 30.dp),
@@ -57,15 +59,13 @@ fun MainButtons(nav: String, @StringRes buttonText:Int, navController: NavHostCo
 }
 
 @Composable
-fun AddButton(navController: NavHostController, nav: String){ //TODO criar AddScreen
-    Button(onClick = {navController.navigate(nav)},
+fun AddButton(navController: NavHostController, nav: String){
+    TextButton (onClick = {navController.navigate(nav)},
     ) {
-        Icon(painter = painterResource(id = R.drawable.adicionar_bttn),
+        Icon(
+            painter = painterResource(id = R.drawable.add_user),
             contentDescription =  stringResource( R.string.add_btn_descrip),
-            modifier = Modifier
-                .padding(1.dp)
-                .width(40.dp)
-                .height(40.dp))
+        )
     }
 }
 
@@ -80,10 +80,13 @@ fun RemoveButton(buttonText:String){
 
 @Composable
 fun RefreshButton(@StringRes buttonText:Int, /*viewModel: ViewModel*/){
-    Button(onClick = {
+    TextButton(onClick = {
         //TODO abrir o viewmodel, vai pegar do Firebase, se tiver coisa nova, vai atualizar o bd e em seguida irá usar a função de dar SELECT, atualizando assim a lista
     }) {
-        Icon(painter = painterResource(id = R.drawable.refresh_button), contentDescription =  stringResource(id = buttonText))
+        Icon(
+            painter = painterResource(id = R.drawable.refresh),
+            contentDescription =  stringResource(id = buttonText)
+        )
     }
 }
 
@@ -126,12 +129,12 @@ fun SearchButton(viewModel: ViewModel){
 
 @Composable
 fun HomeButton(navController: NavHostController){
-    Button(
-        onClick = { navController.navigate("users") },
-        modifier = Modifier
-
-
+    TextButton(
+        onClick = { navController.navigate("home") },
     ) {
-        Icon(painter = painterResource(id = R.drawable.search_bttn), contentDescription =  stringResource(R.string.search_btn_descrip))
+        Icon(
+            painter = painterResource(id = R.drawable.home_bttn),
+            contentDescription =  stringResource(R.string.home_btn_descrip)
+        )
     }
 }

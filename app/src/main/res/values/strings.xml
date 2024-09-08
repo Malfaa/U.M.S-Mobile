@@ -8,6 +8,7 @@
     <string name="logout">Logout</string>
     <string name="logo">Logo UMS</string>
 
+    <string name="addScreen">AddScreen</string>
 <!--    TextField-->
 
 
@@ -19,6 +20,7 @@
     <string name="check_btn_descrip">Check button</string>
     <string name="cancel_btn_descrip">Cancel button</string>
     <string name="search_btn_descrip">Search button</string>
+    <string name="home_btn_descrip">Home button</string>
 <!--    <string name="rmv_btn_descrip">Add button</string>-->
 <!--    <string name="rmv_btn_descrip">Add button</string>-->
 </resources>
