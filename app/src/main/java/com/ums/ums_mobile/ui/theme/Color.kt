@@ -6,8 +6,8 @@ import androidx.compose.ui.graphics.Color
 val ButtonBG = Color(0x66D9D9D9)
 val BorderColor = Color(0x66000000)
 val BackgroudList = Color(0xD301D5DA)
-val middleColor = Color(0xFF034078)
 val startColor = Color(0xFF001F54)
+val middleColor = Color(0xFF034078)
 val endColor = Color(0xFF1282A2)
 val BackgroundGradient = Brush.verticalGradient(
     colors = listOf(startColor, middleColor, endColor), 0f, Float.POSITIVE_INFINITY

@@ -38,7 +38,7 @@ fun UserScreen(navController: NavHostController, /*viewModel: */){
         ){ Icon(
             painter = painterResource(id = R.drawable.user_icon),
             contentDescription = stringResource(id = R.string.users),
-            )
+        )
 
             Text(
                 text = stringResource(id = R.string.users),
@@ -62,6 +62,6 @@ fun UserScreen(navController: NavHostController, /*viewModel: */){
             RefreshButton(R.string.refresh_btn_descrip)
         }
 
-    ListUsers()
+        ListUsers()
     }
 }
